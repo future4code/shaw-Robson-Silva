@@ -14,19 +14,21 @@
 
 
 
-let jogo = confirm("Quer iniciar uma nova rodada?")
+// console.log("Bem-vindo(a) ao jogo de blackjack")
+
+// let jogo = confirm("Quer iniciar uma nova rodada?")
 
 if (jogo) {
-    let carta1User1 = comprarCarta()
-    let carta2User1 = comprarCarta()
-    let card1Pc = comprarCarta()
-    let card2Pc = comprarCarta()
+    let card1Usuario = comprarCartas()
+    let card2Usuario = comprarCartas()
+    let card1Pc = comprarCartas()
+    let card2Pc = comprarCartas()
 
-    let pontuacaoUsuario = carta1Usuario.valor + carta2Usuario.valor
-    let pontuacaoPc = carta1Pc.valor + carta2Pc.valor
+    let pontuacaoUsuario = card1Usuario.valor + card2Usuario.valor
+    let pontuacaoPc = card1Pc.valor + card2Pc.valor
 
-    console.log(`Usuário - cartas: ${carta1User.texto} ${carta2User.texto} - ${pontuacaoUsuario}`)
-    console.log(`Computador - cartas: ${carta1Pc.texto} ${carta2Pc.texto} - ${pontuacaoPc}`)
+    console.log(`Usuário - cartas: ${card1Usuario.texto} ${card2Usuario.texto} - ${pontuacaoUsuario}`)
+    console.log(`Computador - cartas: ${card1Pc.texto} ${card2Pc.texto} - ${pontuacaoPc}`)
 
     if (pontuacaoUsuario > pontuacaoPc) {
         console.log("O usuário ganhou!")
